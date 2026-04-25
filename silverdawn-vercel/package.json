@@ -1,0 +1,8 @@
+{
+  "name": "silver-dawn-creator",
+  "version": "1.0.0",
+  "description": "Silver Dawn Creator - Comic Book Studio",
+  "engines": {
+    "node": "18.x"
+  }
+}
