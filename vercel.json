@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "silverdawn-vercel/api/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "silverdawn-vercel/public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/silverdawn-vercel/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/silverdawn-vercel/public/$1"
+    }
+  ]
+}
