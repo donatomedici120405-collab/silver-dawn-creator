@@ -1,23 +1,13 @@
 {
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "silverdawn-vercel/api/*.js",
-      "use": "@vercel/node"
+      "source": "/api/chat",
+      "destination": "/silverdawn-vercel/api/chat.js"
     },
     {
-      "src": "silverdawn-vercel/public/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/silverdawn-vercel/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/silverdawn-vercel/public/$1"
+      "source": "/(.*)",
+      "destination": "/silverdawn-vercel/public/index.html"
     }
   ]
 }
